@@ -1,0 +1,145 @@
+body {
+    background-color: rgb(73, 67, 67);
+    margin: 0;
+}
+
+.a1 {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(29, 25, 25);
+    border: 2px solid rgb(190, 112, 112);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.a2 {
+    height: 50px;
+}
+
+.b1{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(29, 25, 25);
+}
+.a3 {
+    list-style-type: none;
+    display: flex;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 19px;
+}
+
+.a3 li {
+    color: white;
+    cursor: pointer;
+}
+
+.a3 li.active {
+    font-weight: bold;
+    font-size: large;
+}
+
+.a3 li a {
+    color: white;
+    text-decoration: none;
+}
+
+.a3 li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: inherit;
+}
+
+.a3 li a:hover {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.a3 li:hover{
+    font-weight: bold;
+    font-size: large;
+}
+
+.a3 li.logout{
+    margin-left: 300px;
+    gap: 30px;
+}
+
+.a4{
+    height: 35px;
+    margin-left: -40px;
+}
+
+
+.form-container {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 30px;
+    width: 400px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+   
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container label {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container textarea,
+.form-container input[type="file"] {
+    margin-top: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.form-container button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgb(190, 112, 112);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: rgb(200, 85, 85);
+}
+
+.form-container select {
+    margin-top: 5px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    background-color: #f5f5f5;
+}
+
+.form-container select:focus {
+    outline: none;
+    border: 2px solid rgb(190, 112, 112);
+    background-color: #fff;
+}

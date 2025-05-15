@@ -1,0 +1,258 @@
+body {
+    background-color: rgb(73, 67, 67);
+    margin: 0;
+}
+
+.a1 {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(29, 25, 25);
+    border: 2px solid rgb(190, 112, 112);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.a2 {
+    height: 50px;
+}
+
+.b1{
+    width: 100%;
+    height: 70px;
+    background-color: rgb(29, 25, 25);
+}
+.a3 {
+    list-style-type: none;
+    display: flex;
+    gap: 70px;
+    margin: 0;
+    padding: 0;
+    margin-left: 100px;
+    margin-top: 19px;
+}
+
+.a3 li {
+    color: white;
+    cursor: pointer;
+}
+
+.a3 li.active {
+    font-weight: bold;
+    font-size: large;
+}
+
+.a3 li a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: inherit;
+}
+
+.a3 li a:hover {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+
+.a3 li:hover{
+    font-weight: bold;
+    font-size: large;
+}
+
+.a3 li.logout{
+    margin-left: 300px;
+    gap: 30px;
+}
+
+.a4{
+    height: 35px;
+    margin-left: -40px;
+}
+
+.movie-section {
+    padding: 20px 40px;
+    background-color: none;
+    color: #fff;
+    overflow-x: hidden;
+    height: auto;
+    width: 95%;
+    margin-top: 50px;
+}
+
+
+.view-all {
+    font-size: 14px;
+    color: #e50914;
+    cursor: pointer;
+    float: right;
+}
+
+.movie-scroll-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Firefox */
+}
+
+.movie-scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+.movie-card {
+    width: 250px;
+    height: 200px;
+    flex: 0 0 auto;
+    background-color: none;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-scroll-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    z-index: 2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease; /* Smooth scaling */
+}
+
+.movie-card:hover img {
+    transform: scale(1.1); /* Zoom in slightly */
+    z-index: 1;
+}
+
+.movie-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
+
+
+@media (max-width: 768px) {
+    .a3 {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 20px;
+    }
+
+    .movie-card {
+        width: 200px;
+        height: 150px;
+        margin-left: 10px;
+    }
+
+    .scroll-btn {
+        font-size: 20px;
+        padding: 8px;
+    }
+}
+
+h2{
+    font-size: 40px;
+    margin-bottom: -40px;
+    margin-left: 20px;
+    color: wheat;
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: -40px;
+    margin-left: 20px;
+    margin-top: 0%;
+    color: wheat;
+}
+
+h4{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: wheat;
+}
+
+.filter-section {
+    margin: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: white;
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #2c2c2c;
+    color: white;
+    border-collapse: collapse;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #502323;
+}
+
+thead {
+    background-color: #444;
+}
+
+input, select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+button {
+    background-color: crimson;
+    color: white;
+    cursor: pointer;
+}
+
+.t1{
+    margin-left: 40px;
+    
+}

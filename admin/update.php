@@ -1,0 +1,65 @@
+<?php
+include('../includes/db.php');
+$result = $collection->find(); // Fetch all movies
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Movies</title>
+    <link rel="icon" type="image/png" href="../assests/logo.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="a1">
+        <img class="a2" src="../assests/logo.png" alt="App Logo">
+        <div class="b1">
+            <menu class="a3">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="add.html">Add</a></li>
+                <li class="active">Update</li>
+                <li><a href="delete.php">Delete</a></li>
+                <li> <a href="manage_users.php"> Manage-Users </a></li>
+                <li class="logout"><a href="/videostream/auth/">Logout</a></li>
+                <img class="a4" src="../assests/admin.jpg">
+            </menu>
+        </div>
+    </div>
+
+    <h4 style="color:white; display: flex; justify-content: space-between; align-items: center;">
+    Update Movies
+    <input type="text" id="searchInput" placeholder="Search by title..." style="padding: 6px; border-radius: 30px; margin-left: 30px; border: black; width: 200px;">
+</h4>
+
+<div style="padding: 30px;" id="movieList">
+    <?php foreach ($result as $movie): ?>
+        <div class="movie-item" style="background:#222; color:white; padding:20px; margin-bottom:20px; border-radius:10px;">
+            <h4 class="movie-title"><?php echo htmlspecialchars($movie['title']); ?></h4>
+            <p><strong>Type:</strong> <?php echo htmlspecialchars($movie['type']); ?></p>
+            <p><strong>Description:</strong> <?php echo htmlspecialchars($movie['description']); ?></p>
+            <img src="../<?php echo $movie['thumbnail']; ?>" alt="Thumbnail" width="400px"  ><br><br>
+            <a href="edit.php?id=<?php echo (string)$movie->_id; ?>" style="background:#e50914; padding:10px 20px; color:white; text-decoration:none; border-radius:5px;">Edit</a>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+
+<script>
+document.getElementById('searchInput').addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const movies = document.querySelectorAll('.movie-item');
+
+    movies.forEach(movie => {
+        const title = movie.querySelector('.movie-title').textContent.toLowerCase();
+        if (title.includes(query)) {
+            movie.style.display = 'block';
+        } else {
+            movie.style.display = 'none';
+        }
+    });
+});
+
+</script>
+
+</body>
+</html>

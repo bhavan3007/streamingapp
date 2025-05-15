@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add new movies</title>
+    <link rel="icon" type="image/png" href="../assests/logo.png">
+    <link rel="stylesheet" type="text/css" href="addstyle.css">
+</head>
+<body>
+    <div class="a1">
+        <img class="a2" src="../assests/logo.png" alt="App Logo">
+        <div class="b1">
+        <menu class="a3">
+            <li ><a href="index.php">Home</a> </li>
+            <li class="active">Add</a></li>
+            <li><a href="update.php">Update</a></li>
+            <li><a href="delete.php">Delete</a></li>
+            <li><a href="manage_users.php"> Manage-Users</a></li>
+            <li class="logout"><a href="/videostream/auth/">Logout</a></li>
+            <img class="a4" src="../assests/admin.jpg">
+        </menu>
+    </div>
+    </div>
+    <div class="form-container">
+        <form action="insert.php" method="post" enctype="multipart/form-data">
+            <label for="title">Movie Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter title" required><br>
+    
+            <label for="description">Movie Description</label>
+            <textarea id="description" name="description" placeholder="Enter description" required></textarea><br>
+
+            <label for="movietype">Movie Type</label>
+            <select id="movietype" name="movietype" required>
+                <option value="">-- Select a genre --</option>
+                <option value="Horror">Horror</option>
+                <option value="Action">Action</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+            </select>
+
+    
+            <label for="thumbnail">Thumbnail Image</label>
+            <input type="file" id="thumbnail" name="thumbnail" accept="image/*" required><br>
+    
+            <label for="video">Video File</label>
+            <input type="file" id="video" name="video" accept="video/*" required><br>
+    
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+  
+    <script>
+        // Show alert if upload was successful
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.get('success') === '1') {
+            alert('Movie uploaded successfully!');
+            // Remove the query param so it doesn't alert again if the page reloads
+            window.history.replaceState({}, document.title, window.location.pathname);
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(rgba(133, 116, 116, 0.5), rgba(0, 0, 0, 0.5)), url('https://source.unsplash.com/random/1920x1080?nature');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    width: 850px;
+    height: 600px;
+    display: flex;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.left {
+    background: rgba(0, 0, 0, 0.7);
+    flex: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+}
+
+.left h1 {
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+
+.left p {
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.right {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    position: relative;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.right input, .right select {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.right button {
+    padding: 12px;
+    background-color: crimson;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.right .toggle {
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.center-link {
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.a2{
+    
+    margin-top: -50px;
+    margin-bottom: 20px;
+}
