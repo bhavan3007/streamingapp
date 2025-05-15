@@ -1,1 +1,1 @@
-# streamingapp
+A full-featured video streaming application built with HTML, CSS, JavaScript, PHP, and MongoDB. This project provides a seamless user experience for browsing, watching, and managing movies and TV shows. The application includes a powerful Admin Dashboard for adding, updating, deleting, and managing users, as well as organizing and controlling the movie database.
